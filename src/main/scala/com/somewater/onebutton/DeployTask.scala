@@ -39,7 +39,7 @@ object DeployTask {
     } else {
       val config = confs.foldLeft(ConfigFactory.empty()) { case (config, confFile) ⇒
         config.withFallback(ConfigFactory.parseFile(confFile))
-      }
+      }.resolve()
       if (config.hasPath("deploy")) {
         val path = s"deploy.$stage"
         if (config.hasPath(path)) {
