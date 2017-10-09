@@ -1,7 +1,8 @@
 ## sbt-onebutton-deploy
 
 It's a SBT plugin for SBT project deployment. Steps of deployment:
-1. compile project locally and package it to "zip" archive (thanks to [sbt-native-packager](https://github.com/sbt/sbt-native-packager))
+1. compile project locally and package it to "zip" archive 
+   (thanks to [sbt-native-packager](https://github.com/sbt/sbt-native-packager))
 2. connect to remote server using SSH
 3. make required file structure in app directory (in first time):
     ```
@@ -64,6 +65,8 @@ It's a SBT plugin for SBT project deployment. Steps of deployment:
 ## Requirements
 * Deployment tested on linux servers
 * SSH access to remote servers with required permissions
+* [unzip](http://www.info-zip.org/pub/infozip/) utility should be installed on all remote servers 
+  (installed by default on most linux distributions)
 
 ## License
 This project is licensed under the terms of the MIT license.

@@ -275,7 +275,6 @@ class DeployHandler(opts: DeployOpts) {
   }
 
   private def getBaseName(filepath: String): String = {
-    val filepath = ""
     val filename = new File(filepath).getName
     val index = filename.lastIndexOf(".")
     if (index == -1) filename
