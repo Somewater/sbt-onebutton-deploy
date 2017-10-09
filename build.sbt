@@ -2,7 +2,7 @@ name := "sbt-onebutton-deploy"
 
 organization := "com.github.somewater"
 
-version := "0.0.1"
+version := "0.0.2"
 
 scalaVersion in Global := "2.10.6"
 
