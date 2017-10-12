@@ -19,14 +19,7 @@ It's a SBT plugin for SBT project deployment. Steps of deployment:
 5. goto step 2 with next app server (if multiple server deploy configured) 
 
 ## Installing
-1. At the present time only local installing of artifact:
-    ```bash
-    git clone https://github.com/Somewater/sbt-onebutton-deploy.git
-    cd sbt-onebutton-deploy
-    sbt compile publishLocal
-    ```
-
-2. Integrate with your SBT project:
+1. Integrate with your SBT project:
     
     Add to `project/plugins.sbt`
     ```scala
@@ -38,14 +31,14 @@ It's a SBT plugin for SBT project deployment. Steps of deployment:
     enablePlugins(DeployPlugin)
     ```
 
-3. Generate deploy config from template, run:
+2. Generate deploy config from template, run:
     ```bash
     sbt deployGenerateConf
     ```
     
     Edit new config placed in `conf/deploy.conf`
 
-4. Server setup:
+3. Server setup:
     * required: create start/stop scripts for service, for example using [runit](http://smarden.org/runit/)
     * optional: create directory for project logs (or other release-shared files like local config etc.)
 

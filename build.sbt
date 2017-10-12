@@ -4,8 +4,6 @@ organization := "com.github.somewater"
 
 version := "0.0.2"
 
-scalaVersion in Global := "2.10.6"
-
 sbtPlugin := true
 
 libraryDependencies ++= Seq(
@@ -19,7 +17,7 @@ lazy val root = (project in file("."))
 
 val deploy = TaskKey[Unit]("deploy", "Seamless deploy")
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.2.0")
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.2.2")
 
 licenses := Seq("MIT License" -> url("http://opensource.org/licenses/MIT"))
 
@@ -54,3 +52,5 @@ publishMavenStyle := true
 publishArtifact in Test := false
 
 pomIncludeRepository := { _ => false }
+
+crossSbtVersions := Vector("0.13.16", "1.0.2")
