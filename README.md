@@ -23,7 +23,7 @@ It's a SBT plugin for SBT project deployment. Steps of deployment:
     
     Add to `project/plugins.sbt`
     ```scala
-    addSbtPlugin("com.somewater" % "sbt-onebutton-deploy" % "0.0.2")
+    addSbtPlugin("com.github.somewater" % "sbt-onebutton-deploy" % "0.0.2")
     ```
     
     Add to `build.sbt`
